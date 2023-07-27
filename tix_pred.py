@@ -43,7 +43,7 @@ if upload_file is not None:
 
     level_3 = st.sidebar.radio('Level 3', options=df['Level 3'].unique())
 
-    default_start_date = df['timestamp'].min()
+    default_start_date = pd.to_datetime('2022-01-01')
     default_end_date = df['timestamp'].max()
 
     start_date = st.sidebar.date_input('Start Date', default_start_date)
